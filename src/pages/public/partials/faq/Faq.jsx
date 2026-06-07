@@ -1,3 +1,5 @@
+import { useRef, useState } from "react";
+
 function SectionTitle({ eyebrow, title, subtitle }) {
     return (
         <div className="mx-auto max-w-3xl text-center">
@@ -45,21 +47,59 @@ const faqs = [
     },
 ];
 
+function FaqItem({ question, answer }) {
+    const [isOpen, setIsOpen] = useState(false);
+    const contentRef = useRef(null);
+
+    return (
+        <article className="rounded-2xl border border-border bg-card/70 p-5 cursor-pointer transition-colors duration-300 hover:bg-card">
+            <button
+                type="button"
+                onClick={() => setIsOpen((currentState) => !currentState)}
+                className="flex w-full items-center justify-between gap-4 text-left font-semibold cursor-pointer "
+                aria-expanded={isOpen}
+            >
+                <span>{question}</span>
+
+                <span
+                    className={`text-primary transition-transform duration-300 ${
+                        isOpen ? "rotate-45" : "rotate-0"
+                    }`}
+                >
+                    +
+                </span>
+            </button>
+
+            <div
+                ref={contentRef}
+                className="overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out"
+                style={{
+                    maxHeight: isOpen ? `${contentRef.current?.scrollHeight}px` : "0px",
+                    opacity: isOpen ? 1 : 0,
+                }}
+            >
+                <p className="pt-4 leading-7 text-foreground/65">
+                    {answer}
+                </p>
+            </div>
+        </article>
+    );
+}
+
 export const Faq = () => {
     return (
         <section className="container relative z-10 py-24">
             <SectionTitle eyebrow="FAQ" title="Dúvidas frequentes" />
+
             <div className="mx-auto mt-12 max-w-3xl space-y-4 text-left">
                 {faqs.map((faq) => (
-                    <details key={faq.question} className="group rounded-2xl border border-border bg-card/70 p-5">
-                        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold">
-                            <span>{faq.question}</span>
-                            <span className="text-primary transition-transform group-open:rotate-45">+</span>
-                        </summary>
-                        <p className="mt-4 leading-7 text-foreground/65">{faq.answer}</p>
-                    </details>
+                    <FaqItem
+                        key={faq.question}
+                        question={faq.question}
+                        answer={faq.answer}
+                    />
                 ))}
             </div>
         </section>
     );
-}
+};
