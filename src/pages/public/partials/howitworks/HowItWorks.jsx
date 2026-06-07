@@ -1,4 +1,3 @@
-
 function SectionTitle({ eyebrow, title, subtitle }) {
     return (
         <div className="mx-auto max-w-3xl text-center">
@@ -20,18 +19,23 @@ function SectionTitle({ eyebrow, title, subtitle }) {
 }
 
 const steps = [
-    "Inicie o bot no Telegram e veja os planos disponíveis.",
-    "Escolha entre acesso semanal ou mensal e gere seu Pix.",
-    "Pagou? O sistema confirma automaticamente e envia seu link VIP.",
+    "Abra o bot no Telegram e escolha o plano que faz mais sentido para você.",
+    "Informe seu e-mail e pague com o Pix copia e cola gerado automaticamente.",
+    "Assim que o pagamento for aprovado, o bot envia seu link individual para o canal VIP.",
 ];
 
 export const HowItWorks = () => {
     return (
         <section id="como-funciona" className="container relative py-24">
-            <SectionTitle eyebrow="Fluxo simples" title="Do Pix ao canal VIP em poucos passos." />
+            <SectionTitle
+                eyebrow="Como funciona"
+                title="Do Pix ao canal VIP sem complicação."
+                subtitle="Todo o processo acontece pelo Telegram: você escolhe o plano, paga via Pix e recebe o acesso automaticamente."
+            />
+
             <div className="mx-auto mt-12 grid max-w-5xl gap-5 text-left md:grid-cols-3">
                 {steps.map((step, index) => (
-                    <div key={step} className="rounded-3xl border border-border bg-card/70 p-6 card-hover">
+                    <div key={step} className="card-hover rounded-3xl border border-border bg-card/70 p-6">
                         <span className="text-glow text-4xl font-black">0{index + 1}</span>
                         <p className="mt-5 leading-7 text-foreground/70">{step}</p>
                     </div>
@@ -39,4 +43,4 @@ export const HowItWorks = () => {
             </div>
         </section>
     );
-}
+};
