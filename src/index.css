@@ -156,18 +156,40 @@
 }
 
 @utility card-hover {
-  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+  @apply transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01];
+  box-shadow: 0 0 0 rgba(139, 92, 246, 0);
+}
+
+.card-hover:hover {
+  box-shadow: 8px 18px 45px rgba(15, 23, 42, 0.45), 0 0 25px rgba(139, 92, 246, 0.12);
 }
 
 @utility gradient-border {
-  @apply relative rounded-md;
-  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
-  background-clip: padding-box;
-  border: 1px solid transparent;
+  @apply relative overflow-hidden border border-border bg-card/70 backdrop-blur;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.45),
+    rgba(59, 130, 246, 0.12),
+    rgba(255, 255, 255, 0.06)
+  );
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 @utility cosmic-button {
-  @apply rounded-full bg-primary px-6 py-2 font-medium text-primary-foreground;
+  @apply inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition-all duration-300 hover:scale-[1.02];
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.25);
 }
 
 @utility star {

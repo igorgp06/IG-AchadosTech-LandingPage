@@ -16,13 +16,11 @@ export const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const handleScroll = () => {
-                setIsScrolled(window.scrollY > 10);
-            };
+            setIsScrolled(window.scrollY > 10);
+        };
 
-            window.addEventListener('scroll', handleScroll);
-            return () => window.removeEventListener('scroll', handleScroll);
-        }
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     useEffect(() => {
@@ -43,7 +41,7 @@ export const Navbar = () => {
         <>
             <nav
                 className={cn(
-                    "fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-background/75 backdrop-blur-x",
+                    "fixed inset-x-0 top-0 z-50 border-b border-border/30 bg-background/75 backdrop-blur-x transition-all duration-300",
                     isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs border-b" : "py-5"
                 )}>
 

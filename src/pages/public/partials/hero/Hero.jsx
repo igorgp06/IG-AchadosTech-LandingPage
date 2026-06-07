@@ -38,8 +38,8 @@ function ChatBubble({ text, highlight = false }) {
     return (
         <p
             className={`mb-3 rounded-2xl px-4 py-3 text-sm leading-6 ${highlight
-                    ? "bg-emerald-500/15 text-emerald-200"
-                    : "bg-card text-foreground/75"
+                ? "bg-emerald-500/15 text-emerald-200"
+                : "bg-card text-foreground/75"
                 }`}
         >
             {text}
@@ -82,7 +82,7 @@ export const Hero = () => {
                             </a>
 
                             <a
-                                className="rounded-full border border-border px-6 py-3 text-center font-medium text-foreground/80 transition hover:border-primary hover:text-primary-foreground"
+                                className="rounded-full border border-border px-6 py-3 text-center font-medium text-foreground/80 transition-all hover:border-primary hover:text-primary-foreground hover:scale-[1.02] box-shadow: 0 0 24px rgba(139, 92, 246, 0.25)"
                                 href="#como-funciona"
                             >
                                 Ver como funciona
