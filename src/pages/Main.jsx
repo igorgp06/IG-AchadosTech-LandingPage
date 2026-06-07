@@ -4,6 +4,7 @@ import { Navbar } from "../components/utils/Navbar"
 import { Benefits } from "./public/partials/benefits/Benefits.jsx"
 
 import { Hero } from "./public/partials/hero/Hero"
+import { HowItWorks } from "./public/partials/howitworks/HowItWorks.jsx"
 
 export const Main = () => {
     return (
@@ -14,6 +15,7 @@ export const Main = () => {
             <main>
                 <Hero />
                 <Benefits />
+                <HowItWorks />
             </main>
 
         </div>

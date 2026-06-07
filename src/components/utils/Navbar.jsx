@@ -47,7 +47,7 @@ export const Navbar = () => {
 
                 <div className="container flex items-center justify-between">
 
-                    <a href="#home" className="flex items-center gap-1 font-bold tracking-tight" onClick={() => setIsMenuOpen(false)}>
+                    <a href="#hero" className="flex items-center gap-1 font-bold tracking-tight" onClick={() => setIsMenuOpen(false)}>
                         <span className="grid size-10 place-items-center rounded-xl border border-primary/40 bg-primary/15 text-xl hover:text-glow transition-all duration-300 ">
                             IG
                         </span>
@@ -56,7 +56,7 @@ export const Navbar = () => {
 
                     {/* desktop */}
 
-                    <div className="hidden items-center gap-8 text-sm text-foreground/70 md:flex">
+                    <div className="hidden items-center gap-8 text-sm text-foreground/70 lg:flex">
                         {navItems.map((item) => (
                             <a key={item.href} className="nav-link" href={item.href} onClick={() => setIsMenuOpen(false)}>
                                 {item.name}
@@ -64,7 +64,12 @@ export const Navbar = () => {
                         ))}
                     </div>
 
-                    <a className="cosmic-button hover-shadow-violet hidden md:inline-flex" href={botLink} onClick={() => setIsMenuOpen(false)}>
+                    <a
+                        className="cosmic-button hover-shadow-violet hidden lg:inline-flex"
+                        href={botLink} onClick={() => setIsMenuOpen(false)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Acessar o bot
                     </a>
 
@@ -75,7 +80,7 @@ export const Navbar = () => {
 
             <button
                 onClick={() => setIsMenuOpen((prev) => !prev)}
-                className="md:hidden p-2 text-foreground z-50 fixed top-2 right-4"
+                className="lg:hidden p-2 text-foreground z-50 fixed top-2 right-4"
                 aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
             >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
@@ -83,32 +88,32 @@ export const Navbar = () => {
 
             <div
                 className={cn(
-                    "fixed inset-0 bg-background/99 backdroup-blur-md z-49 flex flex-col items-center justify-center",
-                    "transition-all duration-300 md:hidden",
+                    "fixed inset-0 z-40 flex flex-col items-center justify-center bg-background/95 backdrop-blur-md",
+                    "transition-all duration-300 lg:hidden",
                     isMenuOpen
                         ? "opacity-100 pointer-events-auto"
                         : "opacity-0 pointer-events-none"
                 )}
             >
-                <div className="flex flex-col space-y-8 text-xl text-foreground w-full items-center h-full justify-center ">
-                    {navItems.map((item, key) => (
+                <div className="flex h-full w-full flex-col items-center justify-center space-y-8 text-xl text-foreground">
+                    {navItems.map((item) => (
                         <a
-                            key={key}
+                            key={item.href}
                             href={item.href}
-                            className="text-foreground hover:text-primary transition-colors duration-300"
+                            className="text-foreground transition-colors duration-300 hover:text-primary"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             {item.name}
                         </a>
                     ))}
 
-                    <a className={cn(
-                        "cosmic-button hover-shadow-violet hidden",
-                        isMenuOpen ? "inline-flex" : "hidden"
-                    )}>
+                    <a
+                        className="cosmic-button hover-shadow-violet inline-flex"
+                        href={botLink}
+                        onClick={() => setIsMenuOpen(false)}
+                    >
                         Acessar o bot
                     </a>
-
                 </div>
             </div>
 

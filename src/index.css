@@ -102,7 +102,7 @@
   }
 
   html {
-    @apply scroll-smooth;
+    @apply scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent scroll-smooth;
   }
 
   body {
@@ -190,6 +190,11 @@
 @utility cosmic-button {
   @apply inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition-all duration-300 hover:scale-[1.02];
   box-shadow: 0 0 24px rgba(139, 92, 246, 0.25);
+}
+
+@utility outline-button {
+  @apply rounded-full border border-border px-6 py-3 text-center font-medium text-foreground/80 transition-all duration-300 hover:scale-[1.02] hover:border-primary hover:text-primary-foreground;
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.08);
 }
 
 @utility star {

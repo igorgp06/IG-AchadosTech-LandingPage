@@ -44,7 +44,7 @@ const animationClasses = [
 
 export const Benefits = () => {
     return (
-        <section id="beneficios" className="container relative z-10 py-24">
+        <section id="beneficios" className="container relative py-24">
             <SectionTitle
                 eyebrow="Por que entrar?"
                 title="Menos tempo procurando. Mais chance de encontrar boas oportunidades."
