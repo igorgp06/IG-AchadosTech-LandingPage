@@ -88,7 +88,7 @@ function FaqItem({ question, answer }) {
 
 export const Faq = () => {
     return (
-        <section className="container relative z-10 py-24">
+        <section id="faq" className="container relative z-10 py-24">
             <SectionTitle eyebrow="FAQ" title="Dúvidas frequentes" />
 
             <div className="mx-auto mt-12 max-w-3xl space-y-4 text-left">
