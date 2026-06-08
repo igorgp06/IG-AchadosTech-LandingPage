@@ -28,8 +28,8 @@ export const HowItWorks = () => {
     return (
         <section id="como-funciona" className="container relative py-24">
             <SectionTitle
-                eyebrow="Como funciona"
-                title="Do Pix ao canal VIP sem complicação."
+                eyebrow="Como funciona?"
+                title="Canal VIP de achados sem complicação."
                 subtitle="Todo o processo acontece pelo Telegram: você escolhe o plano, paga via Pix e recebe o acesso automaticamente."
             />
 
