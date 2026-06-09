@@ -158,7 +158,7 @@ export const privacyPolicyHtml = `
                       data-custom-class="body_text"><span style="font-size: 15px;"><span
                           style="color: rgb(89, 89, 89);">
                           <bdt class="statement-end-if-in-editor">
-                            <bdt class="block-component"> or any other application of ours that links to this Privacy
+                            <bdt class="block-component"> or any other service of ours that links to this Privacy
                               Notice.</bdt>
                           </bdt>
                         </span></span></span></span></span></span></span></span></li>

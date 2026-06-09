@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 function SectionTitle({ eyebrow, title, subtitle }) {
     return (
@@ -49,7 +49,6 @@ const faqs = [
 
 function FaqItem({ question, answer }) {
     const [isOpen, setIsOpen] = useState(false);
-    const contentRef = useRef(null);
 
     return (
         <article className="rounded-2xl border border-border bg-card/70 p-5 cursor-pointer transition-colors duration-300 hover:bg-card">
@@ -71,16 +70,15 @@ function FaqItem({ question, answer }) {
             </button>
 
             <div
-                ref={contentRef}
-                className="overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out"
-                style={{
-                    maxHeight: isOpen ? `${contentRef.current?.scrollHeight}px` : "0px",
-                    opacity: isOpen ? 1 : 0,
-                }}
+                className={`grid transition-[grid-template-rows,opacity] duration-500 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                }`}
             >
-                <p className="pt-4 leading-7 text-foreground/65">
-                    {answer}
-                </p>
+                <div className="overflow-hidden">
+                    <p className="pt-4 leading-7 text-foreground/65">
+                        {answer}
+                    </p>
+                </div>
             </div>
         </article>
     );

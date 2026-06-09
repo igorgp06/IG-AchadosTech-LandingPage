@@ -37,7 +37,6 @@ export const Navbar = () => {
     }, [isMenuOpen]);
 
     return (
-
         <>
             <nav
                 className={cn(
@@ -111,12 +110,13 @@ export const Navbar = () => {
                         className="cosmic-button hover-shadow-violet inline-flex"
                         href={botLink}
                         onClick={() => setIsMenuOpen(false)}
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Acessar o bot
                     </a>
                 </div>
             </div>
-
         </>
     );
 }
