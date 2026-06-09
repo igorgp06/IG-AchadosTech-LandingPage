@@ -1,5 +1,5 @@
 export const privacyPolicyHtml = `
-    <style>
+<style>
 .legal-content {
   color: hsl(var(--foreground));
   font-size: 0.95rem;
@@ -126,7 +126,7 @@ export const privacyPolicyHtml = `
               style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">Visit our website<bdt
                   class="block-component"></bdt> at <span style="color: rgb(0, 58, 250);">
                   <bdt class="question noTranslate"><a target="_blank" data-custom-class="link"
-                      href="https://t.me/achadosTechIG_bot">https://t.me/achadosTechIG_bot</a></bdt>
+                      href="https://achados.igdeveloper.com.br">https://achados.igdeveloper.com.br</a></bdt>
                 </span><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span
                       data-custom-class="body_text"><span style="font-size: 15px;"><span
                           style="color: rgb(89, 89, 89);">
@@ -144,8 +144,8 @@ export const privacyPolicyHtml = `
       <ul>
         <li data-custom-class="body_text" style="line-height: 1.5;"><span
             style="font-size: 15px; color: rgb(89, 89, 89);"><span
-              style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">Download and use<bdt
-                  class="block-component"></bdt> our mobile application<bdt class="block-component"></bdt> (<bdt
+              style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">Use our service <bdt
+                  class="block-component"></bdt> (IG Achados Tech), including our website, Telegram bot<bdt class="block-component"></bdt> (<bdt
                   class="question noTranslate">IG Achados Tech)<span
                     style="font-size: 15px; color: rgb(89, 89, 89);"><span
                       style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span
@@ -159,7 +159,7 @@ export const privacyPolicyHtml = `
                           style="color: rgb(89, 89, 89);">
                           <bdt class="statement-end-if-in-editor">
                             <bdt class="block-component"> or any other application of ours that links to this Privacy
-                              Notice</bdt>
+                              Notice.</bdt>
                           </bdt>
                         </span></span></span></span></span></span></span></span></li>
       </ul>
@@ -168,17 +168,11 @@ export const privacyPolicyHtml = `
       </div>
       <ul>
         <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;">Use <bdt
-              class="question noTranslate">IG Achados Tech</bdt>. <bdt class="question">O IG Achados Tech é um serviço
-              digital acessado pelo Telegram que oferece acesso a um canal VIP com promoções, achados, cupons,
-              oportunidades e links relacionados a tecnologia, como periféricos, peças de computador, celulares,
-              acessórios e produtos similares.
+              class="question noTranslate">IG Achados Tech</bdt>. <bdt class="question">IG Achados Tech is a digital service accessed via Telegram that offers access to a VIP channel with promotions, finds, coupons, opportunities, and links related to technology, such as peripherals, computer parts, cell phones, accessories, and similar products.
 
-              O acesso ao canal é realizado por meio de planos pagos por tempo determinado. O usuário escolhe um plano,
-              informa um e-mail, realiza o pagamento por meio do Mercado Pago, após a confirmação do pagamento, o
-              usuário recebe automaticamente um link individual e temporário para entrar no canal VIP no Telegram.
+Access to the channel is through paid plans for a limited time. The user chooses a plan, provides an email address, makes the payment through Mercado Pago, and after payment confirmation, the user automatically receives an individual and temporary link to enter the VIP channel on Telegram.
 
-              O serviço também pode divulgar links promocionais e links de afiliados. Alguns links podem gerar comissão
-              para o projeto, sem custo adicional para o usuário.</bdt></span>
+The service may also display promotional links and affiliate links. Some links may generate a commission for the project, at no additional cost to the user.</bdt></span>
           <bdt class="statement-end-if-in-editor"><span style="font-size: 15px;"></span></bdt>
         </li>
       </ul>
@@ -281,7 +275,7 @@ export const privacyPolicyHtml = `
               you exercise your rights?</strong> The easiest way to exercise your rights is by <bdt
               class="block-component"></bdt>visiting <span style="color: rgb(0, 58, 250);">
               <bdt class="question noTranslate"><a target="_blank" data-custom-class="link"
-                  href="https://t.me/achadosTechIG_bot">https://t.me/achadosTechIG_bot</a></bdt>
+                  href="https://achados.igdeveloper.com.br">https://achados.igdeveloper.com.br</a></bdt>
             </span>
             <bdt class="else-block"></bdt>, or by contacting us. We will consider and act upon any request in accordance
             with applicable data protection laws.
@@ -1664,7 +1658,7 @@ export const privacyPolicyHtml = `
                                                             style="color: rgb(0, 58, 250);">
                                                             <bdt class="question noTranslate"><a target="_blank"
                                                                 data-custom-class="link"
-                                                                href="https://t.me/achadosTechIG_bot">https://t.me/achadosTechIG_bot</a>
+                                                                href="https://achados.igdeveloper.com.br">https://achados.igdeveloper.com.br</a>
                                                             </bdt>
                                                           </span>
                                                           <bdt class="else-block"></bdt>
