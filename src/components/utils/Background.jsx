@@ -4,19 +4,6 @@ export const Background = () => {
     const [stars, setStars] = useState([]);
     const [meteors, setMeteors] = useState([]);
 
-    useEffect(() => {
-        generateStars();
-        generateMeteors();
-
-        const handleResize = () => {
-            generateStars();
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
     const generateStars = () => {
         const numberOfStars = Math.floor(
             (window.innerWidth * window.innerHeight) / 100000
@@ -55,6 +42,19 @@ export const Background = () => {
 
         setMeteors(newMeteors);
     };
+
+    useEffect(() => {
+        generateStars();
+        generateMeteors();
+
+        const handleResize = () => {
+            generateStars();
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     return (
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
